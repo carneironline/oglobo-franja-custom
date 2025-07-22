@@ -1,0 +1,7 @@
+include:
+- show/franja-customizavel/.gitlab-ci.yml
+stages:
+- codequality
+- tests
+- release
+- deploy

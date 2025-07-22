@@ -1,0 +1,66 @@
+{% from 'valor/valor-components/components/_highlight.html' import highlight %}
+{% set componentBody = block.data.get('componentBody', {}) %}
+{% set highlights = componentBody.get('highlights', []) %}
+
+{% set unique_id = "franja_" + block.id %}
+
+{% set bgColor = componentBody.bgColor if componentBody.bgColor else "#ecf4fa" %}
+{% set bgLineColor = componentBody.bgLineColor if componentBody.bgLineColor else "#1e4c9a" %}
+{% set hatColor = componentBody.hatColor if componentBody.hatColor else "#1e4c9a" %}
+{% set titleColor = componentBody.titleColor if componentBody.titleColor else "#000" %}
+{% set imageTop = componentBody.imageTop %}
+
+{% if highlights and highlights|length > 0 %}
+<section class="franja-destaques-home-oglobo" style="background-color: {{bgColor}}">
+    {% if imageTop %}
+    <header class="franja-destaques-custom-header">
+        <div class="franja-destaques-custom-header__logo">
+            <div class="franja-destaques-custom-header__logo-bg-line" style="border-top-color: {{bgLineColor}}"></div>
+
+            <div class="franja-destaques-custom-header__logo-svg" style="background-color: {{bgColor}}">
+                <img src="{{imageTop.url}}" alt="{{imageTop.name}}">
+            </div>
+        </div>
+    </header>
+    {% endif %}
+
+    <div class="franja-destaques-custom-list">
+    {% for highlight_data in highlights %}
+     {% if loop.index > 4 %}
+        {% break %}
+     {% endif %}
+
+      {% if highlight_data %}
+        {% if highlight_data.title %}
+            <div class="item-franja-destaques-custom">
+                {% if highlight_data.hat %}
+                <div class="highlight__hat" style="color: {{hatColor}}">{{highlight_data.hat}}</div>
+                {% endif %} 
+                
+                {% if highlight_data.img %}
+                <div class="highlight__picture">
+                    <a href="{{highlight_data.url}}" title="{{highlight_data.title}}">
+                        <img
+                            class="highlight__picture__img"
+                            src="{{highlight_data.img.url |thumbor_url(width='600', height='342', crop=highlight_data.img.get('crop'))}}"
+                            width="184"
+                            height="105"
+                            alt="{{highlight_data.title}}"
+                            loading="lazy"
+                        />
+                    </a>
+                </div>
+                {% endif %}
+
+                <h2 class="highlight__title" style="color: {{titleColor}};">
+                    <a href="{{highlight_data.url}}" title="{{highlight_data.title}}">
+                        {{highlight_data.title}}
+                    </a>
+                </h2>
+            </div>
+            {% endif %} 
+        {% endif %} 
+    {% endfor %}
+    </div>
+</section>
+{% endif %}

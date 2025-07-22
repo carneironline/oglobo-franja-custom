@@ -1,0 +1,1 @@
+/* web(desktop) critical javascript */

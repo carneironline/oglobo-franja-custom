@@ -1,0 +1,32 @@
+name: Franja Customizável
+slug: franja-customizavel
+namespace: infoglobo
+services: {}
+components:
+    pagesComponent:
+        - name: Franja Customizável
+          slug: franja-customizavel
+          path: pagesComponent/franja-customizavel
+          version: 0.0.1-rc
+          hooks:
+              predeploy:
+                  - cmd: make
+                    args:
+                        - -C
+                        - pagesComponent/franja-customizavel
+                        - build
+    showComponents:
+        - name: franja-customizavel
+          slug: infoglobo/franja-customizavel
+          path: show/franja-customizavel
+          version: 0.0.1
+          hooks:
+              predeploy:
+                  - cmd: make
+                    args:
+                        - -C
+                        - show/franja-customizavel
+                        - build
+metadata:
+    developer-portal/owner: backstage-editora
+apiVersion: project.provision.backstage/v1beta1

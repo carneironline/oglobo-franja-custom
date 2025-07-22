@@ -1,0 +1,23 @@
+.franja-destaques-custom-header {
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &-bg-line {
+            border-top: #1e4c9a solid 1px;
+            width: 100%;
+            position: absolute;
+            top: calc(50% - 1px);
+            z-index: 1;
+        }
+
+        &-svg {
+            position: relative;
+            background: #fff;
+            padding: 0 20px;
+            z-index: 2;
+        }
+    }
+}

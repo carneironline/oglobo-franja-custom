@@ -1,0 +1,42 @@
+.franja-customizavel {
+  .section-title {
+    margin-bottom: 10px;
+  }
+
+  .box {
+    border: #ddd solid 1px;
+    border-radius: 4px;
+    padding: 20px;
+
+    & + .box {
+      margin-top: 40px;
+    }
+  }
+
+  .colors {
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+
+  .image-top {
+    &-info {
+      color: #a43939;
+      font-weight: bold;
+    }
+
+    > div > div:nth-child(2) > div {
+      height: 70px;
+    }
+  }
+
+  .articles {
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}

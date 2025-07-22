@@ -1,0 +1,120 @@
+# não alterar esta seção
+tipo: show-component
+uuid: infoglobo/franja-customizavel # caso você altere o slug no backstage.yaml, é necessário colocar o mesmo nome aqui
+nome: franja-customizavel
+# fim da seção
+
+autor: infoglobo
+
+# caso o seu componente
+# possua uma licença especial,
+# especifique abaixo
+licenca: Proprietária
+
+## caso o componente represente um blockType
+## é necessario que ele possua uma associação
+## com um componente do megadraft
+
+## um templateType é usado para renderizar um contentType
+## obs: deve ser associado a um contentType
+##      através da API de template-type
+
+blockType: franja-customizavel
+
+## caso haja a necessidade de desabilitar o bundler de
+## assets, é possível passar a flag disableAssetBundler.
+## Utilizar SOMENTE com templateType.
+# disableAssetBundler: true
+
+## define o tipo de comportamento do script bundle gerado
+## pode possuir os valores "async", "defer" ou não ser adicionado.
+## somente para templateComponent
+## o valor default é sem async/defer
+## a tag de script receberá esse no seguinte formato:
+##    <script src="path.js" async />,
+##    <script src="path.js" defer /> ou
+##    <script src="path.js" />
+# scriptBehaviour: async
+
+## habilita SSI para o componente
+## somente para sectionComponent e blockComponent
+## o valor default é False
+# enableSSI: True
+
+## parametros a serem passados quando em modo SSI.
+## note que no caso de componentes SSI, estes só terão acesso
+## aos parametros definidos aqui e contexto vindo das functions associadas
+# parameters:
+#   param_name: param_value
+## exemplo
+#   entendo_caso_id: block.data.id  # `block` só é acessível em block components
+#   category: api_content.resource.category # `api_content` e outros dados de contexto estão disponíveis
+#   title: hierarchy.style_api.primary_color
+## Para mais informações sobre SSI e Parametros, veja a docs(http://docs.backstage.globoi.com/show/)
+
+## Tempo de cache do componente
+## Somente para TemplateType e componentes com `enableSSI: True`
+## opcional, default é de 1 minuto
+#cacheTtl: 60
+
+# todos os canais listados
+# são obrigatórios
+channels:
+    desktop:
+        template: web.html
+        # script: web.js
+        # stylesheet: web.css
+        # criticalScript: web.critical.js
+        criticalStylesheet: web.critical.css
+        # externalScripts:
+        #   - https://example.com/script.min.js
+        # externalStylesheets:
+        #   - https://example.com/stylesheet.min.css
+    smart:
+        template: web.html
+        # script: web.js
+        # stylesheet: web.css
+        # criticalScript: web.critical.js
+        criticalStylesheet: web.critical.css
+        # externalScripts:
+        #   - https://example.com/script.min.js
+        # externalStylesheets:
+        #   - https://example.com/stylesheet.min.css
+## Funções que populam os dados necessários
+## para a renderização dos templates do componente.
+## O resultado da execução da function (resposta json)
+## ficará disponível na chave function['nome_da_function']
+## no contexto de renderização do template:
+##
+## - {% function.nome_da_function... %}
+##
+## Em caso de erro, a chave function['nome_da_function']['error']
+## estará populada, e pode ser verificada para efetuar fallbacks de erro:
+##
+## {%- if function.nome_da_function.error %}
+##  {# Tratar fallback #}
+## {%- else %}
+##  <p>O resultado foi: function.nome_da_function.algum_valor_da_function</p>
+## {%- endif %}
+##
+## IMPORTANTE: é responsabilidade do componente, através do template, de
+## tratar erros e executar fallbacks de acordo.
+#
+# renderFunctions:
+#    - beforeRender: function-namespace/function-name  # obrigatório
+#      alias: nome_da_function  # opcional, usado p/ facilitar referencia a partir do template (vide acima)
+#      parameters:  # opcional, permite cache de chamadas de acordo com params passados pra function
+#          param_name: param_value
+#      cacheTtl: tempo_em_segundos  # opcional, tempo de cache da render function (padrão: 60s)
+
+## define configurações customizadas
+## para este show-component para cada
+## ambiente e pode ser acessada no
+## template Jinja como: {% manifest.settings.FOO %]
+# settings:
+#     dev:
+#         FOO: DEV_BAR
+#     qa:
+#         FOO: QA_BAR
+#     prod:
+#         FOO: PROD_BAR

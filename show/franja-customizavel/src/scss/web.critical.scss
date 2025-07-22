@@ -1,0 +1,114 @@
+$spacing-sm: 30px;
+$spacing-md: 40px;
+
+.franja-destaques-custom {
+    padding: $spacing-sm 0 0;
+    margin-bottom: $spacing-sm;
+
+    @media (min-width: 900px) {
+        padding: $spacing-md 124px;
+    }
+
+    &-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        padding: $spacing-md 0 0;
+
+        @media (min-width: 1024px) {
+            flex-direction: row;
+            gap: $spacing-md;
+        }
+
+        .item-franja-destaques-custom {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+            margin-top: 2px;
+
+            @media (min-width: 900px) {
+                box-shadow: none;
+                margin-top: 0;
+            }
+        }
+
+        .highlight__hat {
+            width: 100%;
+            font-family: OpenSans, sans-serif;
+            font-size: 16px;
+            line-height: 0.75;
+            color: #1e4c9a;
+            padding: 30px 30px 8px;
+            margin: 0;
+            order: 1;
+
+            @media (min-width: 900px) {
+                line-height: 1;
+                letter-spacing: 0.26px;
+                padding: 0;
+
+                width: 208px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+
+        .highlight__publish {
+            font-family: OpenSans, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: normal;
+            white-space: nowrap;
+            color: #fff;
+            background-color: #fa0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 16px 16px 8px;
+            max-width: 164px;
+            width: 100%;
+            height: 24px;
+            order: 1;
+
+            @media (min-width: 900px) {
+                margin: 0 auto 6px 0;
+            }
+        }
+
+        .highlight__title {
+            order: 3;
+            font-family: var(--oglobo-font-semibold);
+            font-size: 20px;
+            line-height: 2;
+            color: #000;
+            width: 100%;
+            padding: 24px $spacing-sm;
+            letter-spacing: 0.2px;
+
+            @media (min-width: 900px) {
+                padding: 16px 0;
+            }
+        }
+
+        .highlight__picture {
+            order: 2;
+            margin-top: 12px;
+
+            &__img {
+                width: 100%;
+                height: auto;
+
+                @media (min-width: 900px) {
+                    max-width: 208px;
+                }
+            }
+        }
+    }
+}
+
+@import 'header';

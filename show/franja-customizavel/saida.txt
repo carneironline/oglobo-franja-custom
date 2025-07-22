@@ -1,0 +1,44 @@
+make[1]: Entrando no diretório '/home/dell/git/pages-franja-destaques-home-oglobo'
+[run-show] Running show sandbox (qa) with docker...
+docker stop show-sandbox && docker rm show-sandbox
+[run-admin] Running pages sandbox...
+[watch-show] Watching show assets...
+docker pull docker-pull.artifactory.globoi.com/backstage/show-sandbox:latest
+yarn run v1.22.10
+yarn run v1.22.10
+$ show-components-scripts watch
+$ backstage-admin-react-scripts start
+
+🧐  Watching the files...
+
+
+Verificando versões das dependências...
+
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Hash: [1m6da039606034cfc7bac8[39m[22m
+Version: webpack [1m4.19.1[39m[22m
+Time: [1m635[39m[22mms
+Built at: 2021-10-07 [1m10:11:34[39m[22m
+             [1mAsset[39m[22m      [1mSize[39m[22m          [1mChunks[39m[22m  [1m[39m[22m           [1m[39m[22m[1mChunk Names[39m[22m
+[1m[32msmart.critical.css[39m[22m  1.18 KiB  [1msmart.critical[39m[22m  [1m[32m[emitted][39m[22m  smart.critical
+ [1m[32msmart.critical.js[39m[22m  4.69 KiB  [1msmart.critical[39m[22m  [1m[32m[emitted][39m[22m  smart.critical
+           [1m[32mweb.css[39m[22m  32 bytes             [1mweb[39m[22m  [1m[32m[emitted][39m[22m  web
+            [1m[32mweb.js[39m[22m   4.5 KiB             [1mweb[39m[22m  [1m[32m[emitted][39m[22m  web
+  [1m[32mweb.critical.css[39m[22m  1.15 KiB    [1mweb.critical[39m[22m  [1m[32m[emitted][39m[22m  web.critical
+   [1m[32mweb.critical.js[39m[22m  4.65 KiB    [1mweb.critical[39m[22m  [1m[32m[emitted][39m[22m  web.critical
+[[1m./src/js/smart.critical.js[39m[22m] 77 bytes {[1m[33msmart.critical[39m[22m}[1m[32m [built][39m[22m
+[[1m./src/js/web.critical.js[39m[22m] 74 bytes {[1m[33mweb.critical[39m[22m}[1m[32m [built][39m[22m
+[[1m./src/js/web.js[39m[22m] 56 bytes {[1m[33mweb[39m[22m}[1m[32m [built][39m[22m
+[[1m./src/scss/smart.critical.scss[39m[22m] 39 bytes {[1m[33msmart.critical[39m[22m}[1m[32m [built][39m[22m
+[[1m./src/scss/web.critical.scss[39m[22m] 39 bytes {[1m[33mweb.critical[39m[22m}[1m[32m [built][39m[22m
+[[1m./src/scss/web.scss[39m[22m] 39 bytes {[1m[33mweb[39m[22m}[1m[32m [built][39m[22m
+    + 3 hidden modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/index.js!node_modules/postcss-loader/lib/index.js??ref--5-2!node_modules/sass-loader/lib/loader.js!src/scss/smart.critical.scss[39m[22m:
+    [./node_modules/css-loader/index.js!./node_modules/postcss-loader/lib/index.js?!./node_modules/sass-loader/lib/loader.js!./src/scss/smart.critical.scss] [1m./node_modules/css-loader!./node_modules/postcss-loader/lib??ref--5-2!./node_modules/sass-loader/lib/loader.js!./src/scss/smart.critical.scss[39m[22m 1.38 KiB {[1m[33mmini-css-extract-plugin[39m[22m}[1m[32m [built][39m[22m
+        + 1 hidden module
+Child [1mmini-css-extract-plugin node_modules/css-loader/index.js!node_modules/postcss-loader/lib/index.js??ref--5-2!node_modules/sass-loader/lib/loader.js!src/scss/web.critical.scss[39m[22m:
+    [./node_modules/css-loader/index.js!./node_modules/postcss-loader/lib/index.js?!./node_modules/sass-loader/lib/loader.js!./src/scss/web.critical.scss] [1m./node_modules/css-loader!./node_modules/postcss-loader/lib??ref--5-2!./node_modules/sass-loader/lib/loader.js!./src/scss/web.critical.scss[39m[22m 1.35 KiB {[1m[33mmini-css-extract-plugin[39m[22m}[1m[32m [built][39m[22m
+        + 1 hidden module
+Child [1mmini-css-extract-plugin node_modules/css-loader/index.js!node_modules/postcss-loader/lib/index.js??ref--5-2!node_modules/sass-loader/lib/loader.js!src/scss/web.scss[39m[22m:
+    [./node_modules/css-loader/index.js!./node_modules/postcss-loader/lib/index.js?!./node_modules/sass-loader/lib/loader.js!./src/scss/web.scss] [1m./node_modules/css-loader!./node_modules/postcss-loader/lib??ref--5-2!./node_modules/sass-loader/lib/loader.js!./src/scss/web.scss[39m[22m 194 bytes {[1m[33mmini-css-extract-plugin[39m[22m}[1m[32m [built][39m[22m
+        + 1 hidden module

@@ -1,0 +1,31 @@
+{
+  "name": "pages-franja-destaques-home-oglobo",
+  "description": "É um módulo neutro para incluir diferentes temas e tipos",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "bsgit@git.store.backstage.globoi.com:oneclick-oglobo-team/pages-franja-destaques-home-oglobo.git"
+  },
+  "author": "oneclick-oglobo-team",
+  "bugs": {
+    "url": "http://gitlab.globoi.com/oneclick-oglobo-team/pages-franja-destaques-home-oglobo/issues"
+  },
+  "engines": {
+    "node": ">=7"
+  },
+  "scripts": {
+    "watch": "show-components-scripts watch",
+    "build": "show-components-scripts build"
+  },
+  "browserslist": [
+    "last 2 chrome versions",
+    "last 2 edge versions",
+    "last 2 firefox versions",
+    "last 2 safari versions",
+    "last 2 iOS versions"
+  ],
+  "devDependencies": {
+    "show-components-scripts": "^0.0.8"
+  }
+}

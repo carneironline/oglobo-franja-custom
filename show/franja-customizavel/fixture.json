@@ -1,0 +1,33 @@
+{
+    "tenantId": "valor",
+    "_blocks_path": "api_content.resource.bodyData",
+    "resource": {
+        "bastianInstance": "",
+        "status": {
+            "slug": "published",
+            "type": "published",
+            "name": "Publicado"
+        },
+        "category": "fba075ff-35a3-469c-b30a-bc54bf3fa860",
+        "contentType": "6158504b-6f77-46e4-9a4a-fa22905b409c",
+        "metaTitle": "Pages Show Sandbox - Pages Franja Customizável ",
+        "metaDescription": "Pages Show Sandbox - Pages Franja Customizável ",
+        "created": "2018-03-13T02:38:24.080Z",
+        "modified": "2018-03-15T20:03:48.042Z",
+        "createdBy": "fusion@corp.globo.com",
+        "versionId": "cb7be582-d3f3-4883-8ae0-9aca7c30ac86",
+        "tenantId": "valor",
+        "id": "19125289-adab-4db4-aeee-d191a276d72d",
+        "bodyData": {
+            "blocks": [
+                {
+                    "type": "atomic",
+                    "data": {
+                        "type": "pages-franja-customizavel",
+                        "componentBody": {}
+                    }
+                }
+            ]
+        }
+    }
+}

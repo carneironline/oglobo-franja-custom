@@ -1,0 +1,10 @@
+stages:
+  - release
+
+show - release (infoglobo/franja-customizavel):
+  stage: release
+  image: docker.artifactory.globoi.com/bs-provision/backstage-tools:latest
+  script:
+    - backstage release --only=showComponents.infoglobo/franja-customizavel -y
+  when: manual
+
